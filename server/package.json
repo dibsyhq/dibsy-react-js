@@ -1,0 +1,22 @@
+{
+  "name": "demo-server",
+  "version": "1.0.0",
+  "description": "Dibsy checkout demo server",
+  "main": "server.js",
+  "author": "Oussidi1998",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
