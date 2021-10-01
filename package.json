@@ -2,15 +2,18 @@
   "name": "@dibsy/react-js",
   "version": "1.0.0",
   "description": "Dibsy react js library",
-  "author": "Oussidi1998",
+  "author": "dibsyhq",
   "license": "MIT",
-  "repository": "dibsy-hq/@dibsy/react-js",
   "main": "dist/index.js",
+  "bin": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "Dibsy","Dibsy HQ","Payment gateway"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
@@ -58,6 +61,14 @@
     "typescript": "^3.7.5",
     "xp-loadjs": "^1.0.5"
   },
+  "repository":{
+    "type": "git",
+    "url": "git+https://github.com/dibsyhq/dibsy-react-js"
+  },
+  "bugs": {
+    "url":"https://github.com/dibsyhq/dibsy-react-js/issues"
+  },
+  "homepage": "https://github.com/dibsyhq/dibsy-react-js#readme",
   "files": [
     "dist"
   ]
