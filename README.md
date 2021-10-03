@@ -193,7 +193,7 @@ Type: `object`
 
 Default: `undefined`
 
-Custom style for the input.
+Custom style for the card inputs.
 
 
 ## License
