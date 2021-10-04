@@ -1,21 +1,21 @@
-# @dibsy/react-js
+# dibsy-react
 
 > React component for Dibsy.js
 
-[![NPM](https://img.shields.io/npm/v/@dibsy/react-js.svg)](https://www.npmjs.com/package/@dibsy/react-js) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/dibsy-react.svg)](https://www.npmjs.com/package/dibsy-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Installation
 
-@dibsy/react-js is available as an npm package.
+dibsy-react is available as an npm package.
 
 ```bash
-npm install --save @dibsy/react-js
+npm install --save dibsy-react
 ```
 
 or if you prefer Yarn
 
 ```bash
-yarn add @dibsy/react-js
+yarn add dibsy-react
 ```
 
 
@@ -32,8 +32,8 @@ yarn add @dibsy/react-js
 
 ```tsx
 import React, { Component } from 'react'
-import { EmbedWrapper, CardNumber, ExpiryDate, CardCvc } from '@dibsy/react-js'
-import '@dibsy/react-js/dist/index.css'
+import { EmbedWrapper, CardNumber, ExpiryDate, CardCvc } from 'dibsy-react'
+import 'dibsy-react/dist/index.css'
 
 type submitPaymentFunctionType = (paymentToken: string) => void
 

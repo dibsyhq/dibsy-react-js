@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { EmbedWrapper, CardNumber, ExpiryDate, CardCvc } from '@dibsy/react-js'
+import { EmbedWrapper, CardNumber, ExpiryDate, CardCvc } from 'dibsy-react'
 import axios from 'axios'
-import '@dibsy/react-js/dist/index.css'
+import 'dibsy-react/dist/index.css'
 import './app.css'
 
 type submitPaymentFunctionType = (paymentToken: string) => void

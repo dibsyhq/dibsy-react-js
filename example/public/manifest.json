@@ -1,6 +1,6 @@
 {
-  "short_name": "@dibsy/react-js",
-  "name": "@dibsy/react-js",
+  "short_name": "dibsy-react",
+  "name": "dibsy-react",
   "icons": [
     {
       "src": "favicon.ico",
