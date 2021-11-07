@@ -25,21 +25,24 @@ const App = () => {
   }
 
 
-  function onPaymentComplete(success: boolean, transaction: any) {
-    console.log(success, transaction)
+  function onPaymentComplete(transaction: any,error: any) {
+    // If error object is not null then it contains message field
+    console.log(transaction,error)
   }
 
-  function onErrors(errors: any) {
+
+  /*function onErrors(errors: any) {
     // errors is an object contain errors message of each field
-    /*
+
         errors : {
           cardNumber:"error message",
           cardCode:"error message",
           expiryDate:"error message"
         }
-     */
+
     console.log('errors ', errors)
   }
+  */
 
   return <EmbedWrapper
     publicKey={String(process.env.REACT_APP_DIBSY_PUBLIC_KEY)}
@@ -47,7 +50,7 @@ const App = () => {
       setCanSubmit(value)
     }}
     onPaymentComplete={onPaymentComplete}
-    onErrors={onErrors}
+    //onErrors={onErrors}
   >
     {
       ({

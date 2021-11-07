@@ -59,7 +59,7 @@ const Checkout = () => {
     console.log(success, payment)
   }
 
-    return 
+    return
         <EmbedWrapper
             publicKey={process.env.REACT_APP_DIBSY_PUBLIC_KEY}
             onCanSubmitChange={(value) => {
@@ -84,10 +84,10 @@ const Checkout = () => {
                           <CardCvc />
                         </div>
                       </div>
-                      <button 
-                        className={'submit-button'} 
+                      <button
+                        className={'submit-button'}
                         onClick={(e) => onSubmit(e, submitPayment)}
-                        disabled={!canSubmit || isCheckoutSubmitted} type='submit' 
+                        disabled={!canSubmit || isCheckoutSubmitted} type='submit'
                         >
                         {
                           !isCheckoutSubmitted ? 'Submit checkout' : 'Submitting ...'
@@ -109,7 +109,7 @@ const Checkout = () => {
 ### `EmbedWrapper` Component props
 The `EmbedWrapper` is a parent component that allows you to embed the checkout fields and the submit button inside them. You must also use EmbedWrapper to pass your Dibsy public key and recieve props related to the payment process.
 ```
-  onPaymentComplete: (success: boolean, payment: any) => void;
+  onPaymentComplete: (payment: any,error: boolean) => void;
   onCanSubmitChange?: (value: boolean) => void;
   onSubmitStateChange?: (state: string) => void;
   onPaymentTabClose?: () => void,
@@ -119,11 +119,16 @@ The `EmbedWrapper` is a parent component that allows you to embed the checkout f
 
 #### onPaymentComplete
 
-Type: `(success: boolean, payment: any) => void`
+Type: `(payment: any,error: Error) => void`
 
 Default: `undefined`
 
 The function is triggered when the payment is completed.
+```
+  error : {
+      message:"error message in case of not null"
+  }
+```
 
 
 #### onCanSubmitChange
@@ -199,4 +204,3 @@ Custom style for the card inputs.
 ## License
 
 MIT © [dibsyhq](https://github.com/dibsyhq), [Oussidi Mohamed](https://github.com/Oussidi1998)
- 

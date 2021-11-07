@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import EmbedContext from '../../utils/embed-context'
 import loadjs from 'xp-loadjs'
 import { ENV } from '../../config'
-import { ICardErrors } from '../../utils/types'
+import { ICardErrors,Error } from '../../utils/types'
 
 // import Loading from "../loader";
 
 interface EmbeddingFieldsProps {
-  onPaymentComplete: (success: boolean, payment: any) => void;
+  onPaymentComplete: ( payment: any,error: Error) => void;
   onCanSubmitChange?: (value: boolean) => void;
   onSubmitStateChange?: (state: string) => void;
   onPaymentTabClose?: () => void,
@@ -35,7 +35,9 @@ function Index(props: EmbeddingFieldsProps) {
           disableLoader: true
         },
         onFieldsError: (errors: ICardErrors) => {
-          props.onErrors(errors)
+          if(props?.onErrors){
+            props?.onErrors(errors)
+          }
         },
         canSubmit: ((canSub: boolean) => {
           props?.onCanSubmitChange(canSub)
